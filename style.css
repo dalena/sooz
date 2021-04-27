@@ -1,0 +1,90 @@
+@font-face {
+    font-family: sooz;
+    src: url(assets/fonts/sooz.ttf);
+}
+
+@font-face {
+    font-family: neu;
+    src: url(assets/fonts/neuemachina-light.woff2);
+}
+html {
+    transition: all 1.24s ease;
+}
+
+body {
+    background: #2600ff0a;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    height: 100%;
+    /* max-height: 50%; */
+    /* background: #ededed; */
+    box-shadow: 1px 1px 80px rgb(47, 0, 255);
+    border: 1px thin black;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'sooz';
+    font-size: 48px;
+    text-shadow: 1px 1px 80px rgb(47, 0, 255);
+}
+
+h3{
+    font-family: 'neu';
+    font-size: 1em;
+    padding: .5em 1em;
+    background: #fff;
+    border: solid 1px #000;
+}
+
+a {
+    color: rgb(47, 0, 255);
+    text-decoration: none;
+    transition: all 1.24s ease;
+}
+
+a:hover {
+    filter: blur(3px);
+    
+}
+
+html div.darkmode {
+    cursor: pointer;
+    transition: all 1.24s ease;
+}
+
+html.dark .darkmode .light,
+html:not(.dark) .darkmode .dark {
+    display: none;
+
+}
+
+.dark h1{
+    color: #fff;
+}
+
+.dark h3{
+    background: rgb(47, 0, 255);
+    color: #fff;
+    transition: all 1.24s ease;
+    border: solid 1px #fff;
+}
