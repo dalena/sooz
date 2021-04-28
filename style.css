@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: neu;
-    src: url(assets/fonts/neuemachina-light.woff2);
+    src: url(assets/fonts/NeueMontreal-Bold.otf);
 }
 
 html {
@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background: #2600ff0a;
+    background: #2600ff18;
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
@@ -22,10 +22,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(
-        180deg
-        , rgba(255, 255, 255, 0) 80%, #2600ff 140%);
-        cursor: cell;
+    /* background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, #2600ff 140%); */
+    cursor: cell;
 }
 
 .container {
@@ -34,6 +32,7 @@ body {
     height: 100%;
     /* box-shadow: 1px 1px 80px rgb(47, 0, 255); */
     border: 1px thin black;
+    position: relative;
 }
 
 .wrapper {
@@ -45,8 +44,21 @@ body {
     flex-direction: column;
 }
 
+.sphere {
+    background: radial-gradient(closest-side, #c7baff, #ebf8e1, #2f00ff);
+    /* background: #2f00ff; */
+    width: 40%;
+    height: 70%;
+    position: absolute;
+    /* top: 0; left: 0;  */
+    z-index: -1;
+    filter: blur(60px);
+    border-radius: 100%;
+    border: 30px solid #2f00ff;
+}
+
 a {
-    color: rgb(47, 0, 255);
+    color: #2f00ff;
     text-decoration: none;
     transition: all 1.24s ease;
     cursor: cell;
@@ -59,15 +71,17 @@ a:hover {
 h1 {
     font-family: 'sooz';
     font-size: 48px;
-    text-shadow: 1px 1px 80px rgb(47, 0, 255);
+    /* text-shadow: 1px 1px 80px rgb(47, 0, 255); */
 }
 
 h3 {
-    font-family: 'neu';
+    font-family: 'neu', Arial, Helvetica, sans-serif;
     font-size: 1em;
-    padding: .5em 1em;
+    letter-spacing: 2px;
+    padding: 1.75em 2.2em;
     background: #fff;
     border: solid 1px #000;
+    border-radius: 50%;
 }
 
 html div.darkmode {
@@ -91,3 +105,4 @@ html:not(.dark) .darkmode .dark {
     transition: all 1.24s ease;
     border: solid 1px #fff;
 }
+
